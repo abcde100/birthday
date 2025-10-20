@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About You ❤️</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
+        
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-pink-50 via-white to-rose-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold gradient-text hover:opacity-80 transition">For You ❤️</a>
+            <div class="flex gap-6">
+                <a href="#about" class="text-gray-700 hover:text-pink-600 transition">About</a>
+                <a href="#memories" class="text-gray-700 hover:text-pink-600 transition">Memories</a>
+                <a href="#message" class="text-gray-700 hover:text-pink-600 transition">Message</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-white/50 pt-32">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-12 gradient-text">About You</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="/placeholder.svg?height=400&width=400" alt="Your photo" class="rounded-2xl shadow-xl">
+                </div>
+                <div class="space-y-6">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        You bring so much joy and light into my life. Your smile brightens even my darkest days, and your kindness inspires me to be a better person.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Every moment with you feels special. Whether we're laughing together or just enjoying comfortable silence, I cherish it all.
+                    </p>
+                    <div class="flex gap-4 pt-4">
+                        <div class="bg-pink-100 rounded-lg p-4 flex-1">
+                            <p class="text-sm text-gray-600">Your Superpower</p>
+                            <p class="text-2xl font-bold text-pink-600">Kindness</p>
+                        </div>
+                        <div class="bg-rose-100 rounded-lg p-4 flex-1">
+                            <p class="text-sm text-gray-600">Your Vibe</p>
+                            <p class="text-2xl font-bold text-rose-600">Radiant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memories Section -->
+    <section id="memories" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-12 gradient-text">Our Memories</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Memory 1" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">First Date</h3>
+                        <p class="text-gray-600 text-sm">The day everything changed</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Memory 2" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Adventures</h3>
+                        <p class="text-gray-600 text-sm">Exploring the world together</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Memory 3" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Moments</h3>
+                        <p class="text-gray-600 text-sm">Every second with you matters</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Section -->
+    <section id="message" class="py-20 px-4 bg-gradient-to-r from-pink-100 to-rose-100">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-5xl font-bold mb-8 gradient-text">A Message For You</h2>
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    I want you to know how much you mean to me. You're not just my girlfriend; you're my best friend, my inspiration, and my greatest blessing.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    Thank you for being you. Thank you for your love, your support, and for making every day an adventure. I can't wait to create more memories with you.
+                </p>
+                <p class="text-2xl font-bold gradient-text">
+                    I love you ❤️
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="mb-2">Made with ❤️ for someone special</p>
+            <p class="text-gray-400 text-sm">© 2025 - Forever yours</p>
+        </div>
+    </footer>
+</body>
+</html>
