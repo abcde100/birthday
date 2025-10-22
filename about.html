@@ -23,7 +23,7 @@
       background-clip: text;
     }
 
-    /* Fade animation for modal */
+    /* Fade animation */
     .fade-in {
       animation: fadeIn 0.3s ease-out forwards;
     }
@@ -38,7 +38,7 @@
   <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
       <a href="index.html" class="text-2xl font-bold gradient-text hover:opacity-80 transition">For You ❤️</a>
-      <div class="flex gap-6">
+      <div class="flex gap-6 text-sm md:text-base">
         <a href="#about" class="text-gray-700 hover:text-pink-600 transition">About</a>
         <a href="#memories" class="text-gray-700 hover:text-pink-600 transition">Memories</a>
         <a href="#message" class="text-gray-700 hover:text-pink-600 transition">Message</a>
@@ -52,7 +52,7 @@
       <h2 class="text-5xl font-bold text-center mb-12 gradient-text">About You</h2>
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <img src="picture.jpg" alt="picture" class="rounded-2xl shadow-xl">
+          <img src="picture.jpg" alt="picture" class="rounded-2xl shadow-xl w-full h-auto object-cover aspect-[4/3]">
         </div>
         <div class="space-y-6">
           <p class="text-lg text-gray-700 leading-relaxed">
@@ -61,12 +61,12 @@
           <p class="text-lg text-gray-700 leading-relaxed">
             Your kindness and compassion inspire me to be a better person. I am constantly amazed by your strength and resilience.
           </p>
-          <div class="flex gap-4 pt-4">
-            <div class="bg-pink-100 rounded-lg p-4 flex-1">
+          <div class="flex gap-4 pt-4 flex-wrap">
+            <div class="bg-pink-100 rounded-lg p-4 flex-1 min-w-[130px] text-center">
               <p class="text-sm text-gray-600">Your Superpower</p>
               <p class="text-2xl font-bold text-pink-600">Kindness</p>
             </div>
-            <div class="bg-rose-100 rounded-lg p-4 flex-1">
+            <div class="bg-rose-100 rounded-lg p-4 flex-1 min-w-[130px] text-center">
               <p class="text-sm text-gray-600">Your Vibe</p>
               <p class="text-2xl font-bold text-rose-600">dum</p>
             </div>
@@ -80,20 +80,18 @@
   <section id="memories" class="py-20 px-4">
     <div class="max-w-4xl mx-auto">
       <h2 class="text-5xl font-bold text-center mb-12 gradient-text">Our Memories</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        
-        <!-- Our Pics Card (Clickable) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Our Pics Card -->
         <div onclick="openGallery()" class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105">
-          <img src="1.jpg" alt="Memory 1" class="w-full h-64 object-cover">
+          <img src="1.jpg" alt="Memory 1" class="w-full aspect-[4/3] object-cover">
           <div class="p-4">
             <h3 class="font-bold text-lg mb-2">Our Pics</h3>
             <p class="text-gray-600 text-sm">Our pics every year</p>
           </div>
         </div>
 
-        <!-- Other cards -->
         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105">
-          <img src="/placeholder.svg?height=300&width=300" alt="Memory 2" class="w-full h-64 object-cover">
+          <img src="/placeholder.svg?height=300&width=300" alt="Memory 2" class="w-full aspect-[4/3] object-cover">
           <div class="p-4">
             <h3 class="font-bold text-lg mb-2">Adventures</h3>
             <p class="text-gray-600 text-sm">Exploring the world together</p>
@@ -101,7 +99,7 @@
         </div>
 
         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105">
-          <img src="/placeholder.svg?height=300&width=300" alt="Memory 3" class="w-full h-64 object-cover">
+          <img src="/placeholder.svg?height=300&width=300" alt="Memory 3" class="w-full aspect-[4/3] object-cover">
           <div class="p-4">
             <h3 class="font-bold text-lg mb-2">Moments</h3>
             <p class="text-gray-600 text-sm">Every second with you matters</p>
@@ -111,17 +109,23 @@
     </div>
   </section>
 
-  <!-- Hidden Gallery Modal -->
-  <div id="galleryModal" class="fixed inset-0 bg-black/80 flex items-center justify-center hidden z-50">
-    <div class="bg-white rounded-2xl shadow-2xl p-6 max-w-3xl w-full relative fade-in">
+  <!-- Gallery Modal -->
+  <div id="galleryModal" class="fixed inset-0 bg-black/80 flex items-center justify-center hidden z-50 p-4">
+    <div class="bg-white rounded-2xl shadow-2xl p-6 w-full max-w-3xl relative fade-in overflow-y-auto max-h-[90vh]">
       <button onclick="closeGallery()" class="absolute top-3 right-3 text-gray-500 hover:text-pink-500 text-2xl font-bold">&times;</button>
-      <h3 class="text-2xl font-bold text-center mb-4 gradient-text">Our Pics every year❤️</h3>
-      <div class="grid md:grid-cols-3 gap-4">
-        <img src="1.jpg" alt="1st" class="rounded-xl shadow-lg hover:scale-105 transition">
-        <img src="2.jpg" alt="2nd" class="rounded-xl shadow-lg hover:scale-105 transition">
-        <img src="3.jpg" alt="3rd" class="rounded-xl shadow-lg hover:scale-105 transition">
+      <h3 class="text-2xl font-bold text-center mb-4 gradient-text">Our Pics Every Year ❤️</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <img src="1.jpg" alt="1st" class="rounded-xl shadow-lg w-full object-cover aspect-[4/3] hover:scale-105 transition cursor-pointer" onclick="zoomImage(this.src)">
+        <img src="2.jpg" alt="2nd" class="rounded-xl shadow-lg w-full object-cover aspect-[4/3] hover:scale-105 transition cursor-pointer" onclick="zoomImage(this.src)">
+        <img src="3.jpg" alt="3rd" class="rounded-xl shadow-lg w-full object-cover aspect-[4/3] hover:scale-105 transition cursor-pointer" onclick="zoomImage(this.src)">
       </div>
     </div>
+  </div>
+
+  <!-- Image Zoom Modal -->
+  <div id="zoomModal" class="fixed inset-0 bg-black/90 hidden z-[60] flex items-center justify-center p-4">
+    <button onclick="closeZoom()" class="absolute top-4 right-6 text-white text-3xl font-bold">&times;</button>
+    <img id="zoomedImage" src="" alt="Zoomed" class="max-w-full max-h-[90vh] rounded-2xl shadow-2xl fade-in object-contain">
   </div>
 
   <!-- Message Section -->
@@ -148,17 +152,37 @@
     </div>
   </footer>
 
-  <!-- Gallery Script -->
+  <!-- Script -->
   <script>
     function openGallery() {
-      const modal = document.getElementById('galleryModal');
-      modal.classList.remove('hidden');
+      document.getElementById('galleryModal').classList.remove('hidden');
     }
 
     function closeGallery() {
-      const modal = document.getElementById('galleryModal');
-      modal.classList.add('hidden');
+      document.getElementById('galleryModal').classList.add('hidden');
     }
+
+    // Click outside to close gallery
+    document.getElementById('galleryModal').addEventListener('click', (e) => {
+      if (e.target.id === 'galleryModal') closeGallery();
+    });
+
+    // Zoom image
+    function zoomImage(src) {
+      const zoomModal = document.getElementById('zoomModal');
+      const zoomedImage = document.getElementById('zoomedImage');
+      zoomedImage.src = src;
+      zoomModal.classList.remove('hidden');
+    }
+
+    function closeZoom() {
+      document.getElementById('zoomModal').classList.add('hidden');
+    }
+
+    // Click outside to close zoom
+    document.getElementById('zoomModal').addEventListener('click', (e) => {
+      if (e.target.id === 'zoomModal') closeZoom();
+    });
   </script>
 </body>
 </html>
