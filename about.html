@@ -20,6 +20,19 @@
       from { opacity: 0; transform: scale(0.95); }
       to { opacity: 1; transform: scale(1); }
     }
+    /* ✅ Uniform Image Sizes */
+    .image-uniform {
+      width: 100%;
+      height: 250px; /* consistent size for all images */
+      object-fit: cover;
+      object-position: center;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .image-uniform:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 <body class="bg-gradient-to-br from-pink-50 via-white to-rose-50">
@@ -42,7 +55,7 @@
       <h2 class="text-5xl font-bold text-center mb-12 gradient-text">About You</h2>
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <img src="picture.jpg" alt="picture" class="rounded-2xl shadow-xl w-full h-auto object-cover aspect-[4/3]">
+          <img src="picture.jpg" alt="picture" class="image-uniform shadow-xl w-full h-auto object-cover">
         </div>
         <div class="space-y-6">
           <p class="text-lg text-gray-700 leading-relaxed">
@@ -74,7 +87,7 @@
         
         <!-- Our Pics Card -->
         <div onclick="openGallery('ourPics')" class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105">
-          <img src="1.jpg" alt="Memory 1" class="w-full aspect-[4/3] object-cover">
+          <img src="1.jpg" alt="Memory 1" class="image-uniform">
           <div class="p-4">
             <h3 class="font-bold text-lg mb-2">Our Pics</h3>
             <p class="text-gray-600 text-sm">Our pics every year</p>
@@ -83,19 +96,19 @@
 
         <!-- Memories Card -->
         <div onclick="openGallery('memories')" class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105">
-          <img src="moments2.jpg" alt="Memory 2" class="w-full aspect-[4/3] object-cover">
+          <img src="moments2.jpg" alt="Memory 2" class="image-uniform">
           <div class="p-4">
             <h3 class="font-bold text-lg mb-2">Memories</h3>
             <p class="text-gray-600 text-sm">Our memories through the years</p>
           </div>
         </div>
 
-        <!-- Moments Card -->
-        <div onclick="zoomImage('3.jpg')" class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105">
-          <img src="3.jpg" alt="Memory 3" class="w-full aspect-[4/3] object-cover">
+        <!-- Pets Card -->
+        <div onclick="openGallery('pets')" class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105">
+          <img src="cover.jpg" alt="Pets" class="image-uniform">
           <div class="p-4">
-            <h3 class="font-bold text-lg mb-2">Moments</h3>
-            <p class="text-gray-600 text-sm">Every second with you matters</p>
+            <h3 class="font-bold text-lg mb-2">Our Pets</h3>
+            <p class="text-gray-600 text-sm">Siri, Patchie, Pochi, and Chimmy 🐾</p>
           </div>
         </div>
 
@@ -151,7 +164,11 @@
       },
       memories: {
         title: "Our Memories Through the Years ❤️",
-        images: ["moments1.jpg", "moments2.jpg", "moment3.jpg", "moments4.jpg", "moments 5.jpg", "moments6.jpg", "moments7.jpg", "moments8.jpg", "moments9.jpg",]
+        images: ["moments1.jpg", "moments2.jpg", "moment3.jpg", "moments4.jpg", "moments 5.jpg", "moments6.jpg", "moments7.jpg", "moments8.jpg", "moments9.jpg"]
+      },
+      pets: {
+        title: "Our Pets 🐾",
+        images: ["pet1.jpg", "pet2.jpg", "pet3.jpg", "pet4.jpg"]
       }
     };
 
@@ -159,11 +176,11 @@
       const modal = document.getElementById('galleryModal');
       const title = document.getElementById('galleryTitle');
       const container = document.getElementById('galleryImages');
-
       const gallery = galleries[type];
+
       title.textContent = gallery.title;
       container.innerHTML = gallery.images
-        .map(img => `<img src="${img}" class="rounded-xl shadow-lg hover:scale-105 transition cursor-pointer" onclick="zoomImage('${img}')">`)
+        .map(img => `<img src="${img}" class="image-uniform cursor-pointer" onclick="zoomImage('${img}')">`)
         .join('');
       modal.classList.remove('hidden');
     }
