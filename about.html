@@ -1,126 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About You ❤️</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
-        
-        * {
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-        }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About You ❤️</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Fade animation for modal */
+    .fade-in {
+      animation: fadeIn 0.3s ease-out forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
 </head>
 <body class="bg-gradient-to-br from-pink-50 via-white to-rose-50">
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold gradient-text hover:opacity-80 transition">For You ❤️</a>
-            <div class="flex gap-6">
-                <a href="#about" class="text-gray-700 hover:text-pink-600 transition">About</a>
-                <a href="#memories" class="text-gray-700 hover:text-pink-600 transition">Memories</a>
-                <a href="#message" class="text-gray-700 hover:text-pink-600 transition">Message</a>
-            </div>
-        </div>
-    </nav>
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold gradient-text hover:opacity-80 transition">For You ❤️</a>
+      <div class="flex gap-6">
+        <a href="#about" class="text-gray-700 hover:text-pink-600 transition">About</a>
+        <a href="#memories" class="text-gray-700 hover:text-pink-600 transition">Memories</a>
+        <a href="#message" class="text-gray-700 hover:text-pink-600 transition">Message</a>
+      </div>
+    </div>
+  </nav>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 px-4 bg-white/50 pt-32">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-5xl font-bold text-center mb-12 gradient-text">About You</h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <img src="picture.jpg" alt=picture.jpg class="rounded-2xl shadow-xl">
-                </div>
-                <div class="space-y-6">
-                    <p class="text-lg text-gray-700 leading-relaxed">
-                        You bring so much joy and light into my life. you help me see the beauty in everyday moments
-                    </p>
-                    <p class="text-lg text-gray-700 leading-relaxed">
-                        Your kindness and compassion inspire me to be a better person. I am constantly amazed by your strength and resilience.
-                    </p>
-                    <div class="flex gap-4 pt-4">
-                        <div class="bg-pink-100 rounded-lg p-4 flex-1">
-                            <p class="text-sm text-gray-600">Your Superpower</p>
-                            <p class="text-2xl font-bold text-pink-600">Kindness</p>
-                        </div>
-                        <div class="bg-rose-100 rounded-lg p-4 flex-1">
-                            <p class="text-sm text-gray-600">Your Vibe</p>
-                            <p class="text-2xl font-bold text-rose-600">dum</p>
-                        </div>
-                    </div>
-                </div>
+  <!-- About Section -->
+  <section id="about" class="py-20 px-4 bg-white/50 pt-32">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-5xl font-bold text-center mb-12 gradient-text">About You</h2>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <img src="picture.jpg" alt="picture" class="rounded-2xl shadow-xl">
+        </div>
+        <div class="space-y-6">
+          <p class="text-lg text-gray-700 leading-relaxed">
+            You bring so much joy and light into my life. You help me see the beauty in everyday moments.
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Your kindness and compassion inspire me to be a better person. I am constantly amazed by your strength and resilience.
+          </p>
+          <div class="flex gap-4 pt-4">
+            <div class="bg-pink-100 rounded-lg p-4 flex-1">
+              <p class="text-sm text-gray-600">Your Superpower</p>
+              <p class="text-2xl font-bold text-pink-600">Kindness</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Memories Section -->
-    <section id="memories" class="py-20 px-4">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-5xl font-bold text-center mb-12 gradient-text">Our Memories</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105">
-                    <img src="/placeholder.svg?height=300&width=300" alt="Memory 1" class="w-full h-64 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg mb-2">First Date</h3>
-                        <p class="text-gray-600 text-sm">The day everything changed</p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105">
-                    <img src="/placeholder.svg?height=300&width=300" alt="Memory 2" class="w-full h-64 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg mb-2">Adventures</h3>
-                        <p class="text-gray-600 text-sm">Exploring the world together</p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105">
-                    <img src="/placeholder.svg?height=300&width=300" alt="Memory 3" class="w-full h-64 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg mb-2">Moments</h3>
-                        <p class="text-gray-600 text-sm">Every second with you matters</p>
-                    </div>
-                </div>
+            <div class="bg-rose-100 rounded-lg p-4 flex-1">
+              <p class="text-sm text-gray-600">Your Vibe</p>
+              <p class="text-2xl font-bold text-rose-600">dum</p>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Message Section -->
-    <section id="message" class="py-20 px-4 bg-gradient-to-r from-pink-100 to-rose-100">
-        <div class="max-w-2xl mx-auto text-center">
-            <h2 class="text-5xl font-bold mb-8 gradient-text">A Message For You</h2>
-            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
-                <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                    I want you to know how much your efforts mean to me.  If I don't express it or if I become angry when you get home late, I'm sorry.  I simply want you to get as much sleep as you can because I am aware of your heart problems and how tired and sleep-deprived you are.  also I apologize for not saving your pictures and for being less of a romantic anymore.
-                </p>
-                <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                    I want to thank you for your efforts in life, in your relationship, and in everything you do. If no one else notices, I will be the one who sees your efforts. I also want to thank you for sticking through me through good times and bad, accepting me despite my mistakes, and helping me change again by helping me recover like you did in the past. I love you, thank you.
-                </p>
-                <p class="text-2xl font-bold gradient-text">
-                    I love you ❤️
-                </p>
-            </div>
+  <!-- Memories Section -->
+  <section id="memories" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-5xl font-bold text-center mb-12 gradient-text">Our Memories</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        
+        <!-- Our Pics Card (Clickable) -->
+        <div onclick="openGallery()" class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105">
+          <img src="1.jpg" alt="Memory 1" class="w-full h-64 object-cover">
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">Our Pics</h3>
+            <p class="text-gray-600 text-sm">Our pics every year</p>
+          </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <p class="mb-2">Made with ❤️ for someone special</p>
-            <p class="text-gray-400 text-sm">© 2025 - Forever yours</p>
+        <!-- Other cards -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105">
+          <img src="/placeholder.svg?height=300&width=300" alt="Memory 2" class="w-full h-64 object-cover">
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">Adventures</h3>
+            <p class="text-gray-600 text-sm">Exploring the world together</p>
+          </div>
         </div>
-    </footer>
+
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105">
+          <img src="/placeholder.svg?height=300&width=300" alt="Memory 3" class="w-full h-64 object-cover">
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">Moments</h3>
+            <p class="text-gray-600 text-sm">Every second with you matters</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hidden Gallery Modal -->
+  <div id="galleryModal" class="fixed inset-0 bg-black/80 flex items-center justify-center hidden z-50">
+    <div class="bg-white rounded-2xl shadow-2xl p-6 max-w-3xl w-full relative fade-in">
+      <button onclick="closeGallery()" class="absolute top-3 right-3 text-gray-500 hover:text-pink-500 text-2xl font-bold">&times;</button>
+      <h3 class="text-2xl font-bold text-center mb-4 gradient-text">Our Pics every year❤️</h3>
+      <div class="grid md:grid-cols-3 gap-4">
+        <img src="1.jpg" alt="1st" class="rounded-xl shadow-lg hover:scale-105 transition">
+        <img src="2.jpg" alt="2nd" class="rounded-xl shadow-lg hover:scale-105 transition">
+        <img src="3.jpg" alt="3rd" class="rounded-xl shadow-lg hover:scale-105 transition">
+      </div>
+    </div>
+  </div>
+
+  <!-- Message Section -->
+  <section id="message" class="py-20 px-4 bg-gradient-to-r from-pink-100 to-rose-100">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-5xl font-bold mb-8 gradient-text">A Message For You</h2>
+      <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          I want you to know how much your efforts mean to me. If I don't express it or if I become angry when you get home late, I'm sorry. I simply want you to get as much sleep as you can because I am aware of your heart problems and how tired and sleep-deprived you are. Also I apologize for not saving your pictures and for being less romantic lately.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          I want to thank you for your efforts in life, in your relationship, and in everything you do. If no one else notices, I will be the one who sees your efforts. I also want to thank you for sticking through me through good times and bad, accepting me despite my mistakes, and helping me change again by helping me recover like you did in the past. I love you, thank you.
+        </p>
+        <p class="text-2xl font-bold gradient-text">I love you ❤️</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="mb-2">Made with ❤️ for someone special</p>
+      <p class="text-gray-400 text-sm">© 2025 - Forever yours</p>
+    </div>
+  </footer>
+
+  <!-- Gallery Script -->
+  <script>
+    function openGallery() {
+      const modal = document.getElementById('galleryModal');
+      modal.classList.remove('hidden');
+    }
+
+    function closeGallery() {
+      const modal = document.getElementById('galleryModal');
+      modal.classList.add('hidden');
+    }
+  </script>
 </body>
 </html>
